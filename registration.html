@@ -1,0 +1,98 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>UI pages</title>
+        <style>
+            div{
+                background-size:cover;
+                background-repeat:no repeat;
+            }
+            body{
+                background-image:url("reg2.webp");
+                background-size:cover;
+                background-repeat:no repeat;
+            }
+            h1{text-align:center;}
+            h3{text-align:center;}
+            h4{text-align:center;}
+            .abc{
+         
+         width:50%;
+         margin: auto;
+         color:rgb(7, 3, 3);
+         backdrop-filter: blur(16px) saturate(180%);
+         -webkit-backdrop-filter: blur(16px) saturate(180%);
+         background-color: rgba(146, 135, 147, 0.582);
+         border-radius: 12px;
+         border: 1px solid rgba(5, 4, 4, 0.125);
+         height: 720;
+         margin-left:10%;
+      }
+     
+        </style>
+        <script>
+            function validation(){
+                var sno=document.myform.sno.value;          
+                var fname=document.myform.fname.value;          
+
+                   if(fname==null||fname==""){
+           alert("Name can't be blank")
+             return false;
+           } 
+           if(sno==null||sno==""){
+           alert("Name can't be blank")
+             return false;
+           } 
+     
+     return true
+    }
+    </script>
+
+
+        
+    </head>
+    <body>
+        <br>
+        <br>
+        <body background=""></body>
+        
+        <div class="abc">
+        <form action="loginform.html">
+            <h1>registration form</h1><br>
+            <hr>
+            <br>
+            <form name="myform" action= "loginform.html" onsubmit= "return validation(this)" >
+            <h4><b>serial no:<input type="number" Name="serialno" placeholder="number">
+            problem:<input type="text" name="pbm" placeholder="problem"><h4><br>
+            Date:<input type="date" name="Date">
+            last visited Date:<input type="date" name="lDate"><b><br><br>
+            <h3>fullname:<input type="text"  placeholder="fullname" Name="fname"></h3><br>
+             Select gender:<select name="my gender">
+                <option value="femal">Select</option>
+                <option value="female">female</option>
+                <option value="male">male</option>
+                <option value="others">others</option>
+            </select>
+            Weight:<input type="text" name="village" placeholder="kgs"><br><br>
+            <h3>phone no:<input type="tel" name="number" placeholder="number"></h3><br><br>
+            <b>Blood type:<input list="email" name="email" placeholder="select"></b>
+            <datalist id="email">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </datalist>
+            <b>Email:<input type="text" name="email" placeholder="email"></b><br><br>
+            <h3><b>Address:<textarea name="Adr">yours..</textarea></b></h3>
+           
+            <h2><input type="submit"  class="btn btn-info" value="Submit"></h2> 
+        </form>
+    </body>
+</html>
